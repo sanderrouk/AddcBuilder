@@ -13,7 +13,7 @@ On usage and set up consult the [wiki](../../wiki/Home), alternatively you can c
 ```gradle
 gradlew : distZip
 ```
-Or just run by running 
+Or just run the program by running 
 ```gradle
 gradlew : run
 ```
