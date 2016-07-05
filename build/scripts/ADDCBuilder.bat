@@ -69,7 +69,7 @@ set CMD_LINE_ARGS=%$
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\ADDCBuilder-1.0-SNAPSHOT.jar;%APP_HOME%\lib\jcabi-ssh-1.5.2.jar;%APP_HOME%\lib\jcabi-aspects-0.22.jar;%APP_HOME%\lib\jcabi-log-0.16.jar;%APP_HOME%\lib\commons-lang3-3.4.jar;%APP_HOME%\lib\commons-io-2.4.jar;%APP_HOME%\lib\jsch-0.1.51.jar;%APP_HOME%\lib\aspectjrt-1.8.4.jar;%APP_HOME%\lib\validation-api-1.1.0.Final.jar;%APP_HOME%\lib\slf4j-api-1.7.5.jar
+set CLASSPATH=%APP_HOME%\lib\ADDCBuilder-1.0-RELEASE.jar;%APP_HOME%\lib\jcabi-ssh-1.5.2.jar;%APP_HOME%\lib\jcabi-aspects-0.22.jar;%APP_HOME%\lib\jcabi-log-0.16.jar;%APP_HOME%\lib\commons-lang3-3.4.jar;%APP_HOME%\lib\commons-io-2.4.jar;%APP_HOME%\lib\jsch-0.1.51.jar;%APP_HOME%\lib\aspectjrt-1.8.4.jar;%APP_HOME%\lib\validation-api-1.1.0.Final.jar;%APP_HOME%\lib\slf4j-api-1.7.5.jar
 
 @rem Execute ADDCBuilder
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %ADDC_BUILDER_OPTS%  -classpath "%CLASSPATH%" com.sonictest.addcbuilder.Main %CMD_LINE_ARGS%

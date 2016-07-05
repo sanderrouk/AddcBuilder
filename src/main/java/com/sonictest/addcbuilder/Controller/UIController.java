@@ -3,13 +3,9 @@ package com.sonictest.addcbuilder.Controller;
 import com.sonictest.addcbuilder.Logic.ADDCBuilder;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,6 +13,7 @@ import java.util.ResourceBundle;
 public class UIController implements Initializable{
 
     @FXML private Button uiCreateAddcButton;
+    @FXML private Button uiHelpButton;
     @FXML private TextField uiServerIpTextField;
     @FXML private TextField uiServerUsernameTextField;
     @FXML private TextField uiServerHostnameTextField;
@@ -29,11 +26,35 @@ public class UIController implements Initializable{
     @FXML private PasswordField uiDomainPasswordField;
     @FXML private TextArea uiConsole;
     @FXML private Service<Void> backgroundService;
+    
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        //Tooltips
+        uiServerIpTextField.setTooltip(new Tooltip("Target server ip, usually local, needs to support SSH."));
+        uiServerUsernameTextField.setTooltip(new Tooltip("User with rights to run sudo commands."));
+        uiServerPasswordTextField.setTooltip(new Tooltip("Password to user with rights to sudo commands."));
+        uiServerHostnameTextField.setTooltip(new Tooltip("Server hostname e.g. dc1."));
+        uiDomainUrlTextField.setTooltip(new Tooltip("Domain URL, e.g. phantomarts.xyz."));
+        uiDomainNameTextField.setTooltip(new Tooltip("Domain name, e.g. CorpDom."));
+        uiDomainPasswordField.setTooltip(new Tooltip("Domain administrator account password."));
+        uiNetGatewayTextField.setTooltip(new Tooltip("Server gateway, e.g. 192.168.0.1."));
+        uiNetNetmaskTextField.setTooltip(new Tooltip("Server netmask, e.g. 255.255.255.0 not /24."));
+        uiNetUpstreamTextField.setTooltip(new Tooltip("This needs to be the server which is going to be handling the " +
+                "upstream DNS, if you don't have one use 8.8.8.8(Google DNS)."));
+
         ADDCBuilder addcBuilder = new ADDCBuilder(uiConsole);
+
+        uiHelpButton.setOnMouseClicked((event -> {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("For additional help visit:");
+            alert.setContentText("http://addcbuilder.phantomarts.xyz or \n " +
+                    "http://www.phantomarts.xyz/addcbuilder");
+
+            alert.setTitle("Info");
+            alert.showAndWait();
+        }));
 
 
         //init ADDC Builder on button press

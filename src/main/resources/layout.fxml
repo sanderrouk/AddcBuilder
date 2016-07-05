@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sonictest.addcbuilder.Controller.UIController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sonictest.addcbuilder.Controller.UIController">
    <children>
       <GridPane layoutX="21.0" prefHeight="400.0" prefWidth="299.0">
         <columnConstraints>
@@ -53,6 +53,7 @@
             <TextField fx:id="uiNetGatewayTextField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             <TextField fx:id="uiNetNetmaskTextField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <TextField fx:id="uiNetUpstreamTextField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Button fx:id="uiHelpButton" alignment="CENTER" mnemonicParsing="false" text="Help" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
          </children>
       </GridPane>
       <TextArea fx:id="uiConsole" editable="false" layoutX="331.0" layoutY="5.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="460.0">
