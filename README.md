@@ -11,9 +11,9 @@ The Interface controller is in the controller directory.
 ### How do I get set up? ###
 On usage and set up consult the [wiki](../../wiki/Home), alternatively you can compile package using the gradle wrapper by running 
 ```gradle
-gradlew : distZip
+gradlew :distZip
 ```
 Or just run the program by running 
 ```gradle
-gradlew : run
+gradlew :run
 ```
