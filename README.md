@@ -1,29 +1,15 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This program is built using Java and uses SSH to connect to an Ubuntu server version 16.04 and then builds it into an Active Directory Domain Controller using Samba 4.
 
-### What is this repository for? ###
+### Project Structure ###
+The project uses the gradle wrapper to get the dependencies from the maven repository. 
+The ADDC build logic can be found in the Logic directory,
+The Interface controller is in the controller directory.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+On usage and set up consult the wiki, alternatively you can compile package using the gradle wrapper by running 
+```gradle
+gradlew : distZip
+```
