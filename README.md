@@ -1,8 +1,6 @@
 # README 
 This program is built using Java and uses SSH to connect to an Ubuntu server version 16.04 and then builds it into an Active Directory Domain Controller using Samba 4.
 
-### NOTICE: This projects code will go through heavy refactoring.
-
 ### Project Structure
 The project uses the gradle wrapper to get the dependencies from the maven repository. 
 The ADDC build logic can be found in the Logic directory,
